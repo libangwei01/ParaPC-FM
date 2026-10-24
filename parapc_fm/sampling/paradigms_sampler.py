@@ -1,7 +1,7 @@
 """Adaptive ParaPC-FM sliding window based on ParaDiGMS.
 
 ParaDiGMS: Copyright (c) 2023 Andy Shih, MIT License.
-See LICENSES/ParaDiGMS-LICENSE.txt and THIRD_PARTY_NOTICES.md.
+See THIRD_PARTY_NOTICES.md for the complete upstream license.
 """
 
 import math

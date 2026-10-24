@@ -13,9 +13,7 @@ Source version: `d44faf9ae6757d54148711f58721d4b399ac28a6`:
 and
 [`stablediffusion_paradigms_mp.py`](https://github.com/AndyShih12/paradigms/blob/d44faf9ae6757d54148711f58721d4b399ac28a6/paradigms/stablediffusion_paradigms_mp.py).
 
-Copyright (c) 2023 Andy Shih. Licensed under the MIT License; the original
-copyright and complete license are preserved in
-[`LICENSES/ParaDiGMS-LICENSE.txt`](LICENSES/ParaDiGMS-LICENSE.txt).
+Copyright (c) 2023 Andy Shih. Licensed under the MIT License, reproduced below.
 
 Paper: Andy Shih, Suneel Belkhale, Stefano Ermon, Dorsa Sadigh and Nima Anari,
 *Parallel Sampling of Diffusion Models*, NeurIPS 2023.
@@ -23,6 +21,32 @@ Paper: Andy Shih, Suneel Belkhale, Stefano Ermon, Dorsa Sadigh and Nima Anari,
 ParaPC-FM adds Flow Matching updates, step-size-based error normalization,
 predictor-corrector updates and truncated initialization. The distributed
 runtime uses PyTorch process groups and collectives.
+
+### ParaDiGMS license
+
+```text
+MIT License
+
+Copyright (c) 2023 Andy Shih
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
 
 ## ParaTAA
 

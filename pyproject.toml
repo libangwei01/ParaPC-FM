@@ -22,7 +22,7 @@ dev = ["pytest>=8"]
 include = ["parapc_fm*"]
 
 [tool.setuptools]
-license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md", "LICENSES/*.txt"]
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
