@@ -7,19 +7,23 @@ sampling. Multiple GPUs evaluate different timesteps of the same image.
 
 ## Method overview
 
-### Iterative update
+<table>
+  <tr>
+    <th width="50%" align="center">Iterative update</th>
+    <th width="50%" align="center">Truncated initialization</th>
+  </tr>
+  <tr>
+    <td align="center" valign="top"><img src="assets/iterative_update.svg" width="100%" alt="Parallel predictor-corrector update"></td>
+    <td align="center" valign="top"><img src="assets/initialization.svg" width="100%" alt="Truncated initialization of future states"></td>
+  </tr>
+  <tr>
+    <td valign="top">Velocity predictions are evaluated in parallel across the current window, then combined with historical velocity differences to update the states. The update rule is selected by <code>p</code>.</td>
+    <td valign="top">Previously computed velocity predictions extrapolate states entering the next window. The initialization order <code>q</code> controls the use of historical information without additional model evaluations.</td>
+  </tr>
+</table>
 
-The predictor-corrector update combines velocity predictions across timesteps
-within the sampling window. The update rule is controlled by p.
-
-![Parallel predictor-corrector update](assets/iterative_update.svg)
-
-### Truncated initialization
-
-Previously computed velocity predictions initialize future states with
-initialization order q.
-
-![Truncated initialization of future states](assets/initialization.svg)
+In the diagrams, <code>u</code> denotes the correction iteration and
+<code>t_i</code> denotes a discrete sampling time.
 
 ## Supported models
 

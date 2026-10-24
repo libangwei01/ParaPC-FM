@@ -7,17 +7,22 @@ ParaPC-FM 复用已有预测，为并行采样中的未来状态提供初始化�
 
 ## 方法概览
 
-### 迭代更新
+<table>
+  <tr>
+    <th width="50%" align="center">迭代更新</th>
+    <th width="50%" align="center">截断初始化</th>
+  </tr>
+  <tr>
+    <td align="center" valign="top"><img src="assets/iterative_update.svg" width="100%" alt="并行预测校正更新"></td>
+    <td align="center" valign="top"><img src="assets/initialization.svg" width="100%" alt="未来状态的截断初始化"></td>
+  </tr>
+  <tr>
+    <td valign="top">并行计算当前窗口内各时间步的速度预测，再结合历史速度差更新状态。<code>p</code> 选择预测校正的更新规则。</td>
+    <td valign="top">复用已有的速度预测，外推新进入窗口的状态。<code>q</code> 控制初始化阶数及历史信息的使用，无需额外模型评估。</td>
+  </tr>
+</table>
 
-预测校正更新结合窗口内不同时间步的速度预测，更新规则由 p 控制。
-
-![并行预测校正更新](assets/iterative_update.svg)
-
-### 截断初始化
-
-复用已有的速度预测初始化未来状态，初始化阶数由 q 控制。
-
-![未来状态的截断初始化](assets/initialization.svg)
+图中 <code>u</code> 表示校正迭代编号，<code>t_i</code> 表示离散采样时间点。
 
 ## 支持模型
 
