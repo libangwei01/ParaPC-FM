@@ -147,15 +147,15 @@ tests/            数值、模型管线与通信测试
 docs/             算法说明与实验配置
 ```
 
-## 引用与致谢
+## 致谢
 
-论文：**ParaPC-FM: Accelerating Parallel Sampling via Principled Initialization**。
+本项目基于 [ParaDiGMS](https://github.com/AndyShih12/paradigms)、
+[ParaTAA-Diffusion](https://github.com/TZW1998/ParaTAA-Diffusion) 和
+[Diffusers](https://github.com/huggingface/diffusers) 构建，预测校正方法受到
+[UniPC](https://github.com/wl-zhao/UniPC) 的启发。感谢相关作者分享他们的工作。
 
-Flow 采样框架基于 [ParaDiGMS](https://github.com/AndyShih12/paradigms)。
-使用该框架时，请同时引用 Shih 等人的
-*Parallel Sampling of Diffusion Models*（NeurIPS 2023）。
+## 引用
 
-SD1.5 采样器基于 [ParaTAA-Diffusion](https://github.com/TZW1998/ParaTAA-Diffusion)。
-使用 ParaTAA 采样器时，请同时引用 Tang 等人的
-*Accelerating Parallel Sampling of Diffusion Models*（ICML 2024）。
-详见 [第三方来源说明](THIRD_PARTY_NOTICES.md)。
+如果本工作对你的研究有所帮助，欢迎引用我们的论文。
+
+<!-- 在此添加论文的 BibTeX 引用。 -->

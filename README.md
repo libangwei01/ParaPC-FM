@@ -159,16 +159,16 @@ tests/            Numerical, pipeline and distributed tests
 docs/             Algorithm and experiment settings
 ```
 
-## Citation and acknowledgments
+## Acknowledgments
 
-Paper: **ParaPC-FM: Accelerating Parallel Sampling via Principled Initialization**.
+Our implementation builds on [ParaDiGMS](https://github.com/AndyShih12/paradigms),
+[ParaTAA-Diffusion](https://github.com/TZW1998/ParaTAA-Diffusion), and
+[Diffusers](https://github.com/huggingface/diffusers). Our predictor-corrector
+formulation is inspired by [UniPC](https://github.com/wl-zhao/UniPC).
+We thank the authors for sharing their work.
 
-The Flow sampling framework builds on
-[ParaDiGMS](https://github.com/AndyShih12/paradigms). Please also cite Shih et al.,
-*Parallel Sampling of Diffusion Models*, NeurIPS 2023, when using this framework.
+## Citation
 
-The SD1.5 sampler builds on
-[ParaTAA-Diffusion](https://github.com/TZW1998/ParaTAA-Diffusion).
-Please also cite Tang et al., *Accelerating Parallel Sampling of Diffusion
-Models*, ICML 2024, when using the ParaTAA sampler.
-[Third-party attribution](THIRD_PARTY_NOTICES.md).
+If you find our work useful in your research, please consider citing our paper.
+
+<!-- Add the paper's BibTeX entry here. -->
