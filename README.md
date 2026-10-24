@@ -34,7 +34,7 @@ In the diagrams, <code>u</code> denotes the correction iteration and
 | Stable Diffusion 3.5 Large | `stabilityai/stable-diffusion-3.5-large` | `demos/demo_sd35_paradigms.py` |
 | Stable Diffusion 1.5 + ParaTAA | `stable-diffusion-v1-5/stable-diffusion-v1-5` | `demos/demo_sd15_parataa.py` |
 
-## Installation
+## Quick start
 
 Use Python 3.10+ and install PyTorch for your CUDA environment. From the
 repository root:
@@ -44,8 +44,6 @@ python -m pip install -e .
 ```
 
 The pipelines use Diffusers 0.36.0.
-
-## Quick start
 
 Generate an image with eight GPUs:
 

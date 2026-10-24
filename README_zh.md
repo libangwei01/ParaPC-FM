@@ -33,7 +33,7 @@ ParaPC-FM 复用已有预测，为并行采样中的未来状态提供初始化�
 | Stable Diffusion 3.5 Large | `stabilityai/stable-diffusion-3.5-large` | `demos/demo_sd35_paradigms.py` |
 | Stable Diffusion 1.5 + ParaTAA | `stable-diffusion-v1-5/stable-diffusion-v1-5` | `demos/demo_sd15_parataa.py` |
 
-## 安装
+## 快速开始
 
 使用 Python 3.10 及以上版本，先安装与 CUDA 环境匹配的 PyTorch，再在仓库根目录执行：
 
@@ -42,8 +42,6 @@ python -m pip install -e .
 ```
 
 模型管线使用 Diffusers 0.36.0。
-
-## 快速开始
 
 使用 8 张 GPU 生成图像：
 
