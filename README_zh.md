@@ -1,10 +1,23 @@
-# ParaPC-FM
+# ParaPC-FM: Accelerating Parallel Sampling via Principled Initialization
 
-论文 **ParaPC-FM: Accelerating Parallel Sampling via Principled Initialization** 的代码。
 [English](README.md)
 
 ParaPC-FM 复用已有预测，为并行采样中的未来状态提供初始化。
 多张 GPU 分别计算同一张图像的不同时间步。
+
+## 方法概览
+
+### 迭代更新
+
+预测校正更新结合窗口内不同时间步的速度预测，更新规则由 p 控制。
+
+![并行预测校正更新](assets/iterative_update.svg)
+
+### 截断初始化
+
+复用已有的速度预测初始化未来状态，初始化阶数由 q 控制。
+
+![未来状态的截断初始化](assets/initialization.svg)
 
 ## 支持模型
 

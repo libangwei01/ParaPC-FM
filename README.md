@@ -1,10 +1,25 @@
-# ParaPC-FM
+# ParaPC-FM: Accelerating Parallel Sampling via Principled Initialization
 
-Code for **ParaPC-FM: Accelerating Parallel Sampling via Principled Initialization**.
 [中文文档](README_zh.md)
 
 ParaPC-FM reuses past predictions to initialize future states in parallel
 sampling. Multiple GPUs evaluate different timesteps of the same image.
+
+## Method overview
+
+### Iterative update
+
+The predictor-corrector update combines velocity predictions across timesteps
+within the sampling window. The update rule is controlled by p.
+
+![Parallel predictor-corrector update](assets/iterative_update.svg)
+
+### Truncated initialization
+
+Previously computed velocity predictions initialize future states with
+initialization order q.
+
+![Truncated initialization of future states](assets/initialization.svg)
 
 ## Supported models
 
