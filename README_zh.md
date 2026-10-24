@@ -99,6 +99,24 @@ SD3、SD3.5 和 SD1.5 支持 `--negative_prompt`。
 每对分类器自由引导预测计为一次引导后的时间步评估。
 模型加载、准备、采样和解码耗时分别记录。重复使用同一输出目录会覆盖已有示例结果。
 
+## Python 接口
+
+多卡使用 `torchrun` 运行以下程序，单卡使用 `python`：
+
+```python
+from parapc_fm import load_pipeline
+from parapc_fm.distributed import Runtime
+
+runtime = Runtime()
+try:
+    pipe = load_pipeline("flux", runtime=runtime)
+    result = pipe("A watercolor landscape", update_order=1, init_order=2)
+    if runtime.is_main:
+        result.images[0].save("landscape.png")
+finally:
+    runtime.close()
+```
+
 ## 实验
 
 准备每个非空行包含一条提示词的 `prompts.txt`，运行阶数对比：

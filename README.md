@@ -110,6 +110,25 @@ classifier-free guidance pair counts as one guided timestep evaluation.
 Model loading, preparation, sampling and decoding times are recorded
 separately. Reusing an output directory overwrites its demo results.
 
+## Python API
+
+Run the following program with `torchrun` for multiple GPUs or `python` for
+one GPU:
+
+```python
+from parapc_fm import load_pipeline
+from parapc_fm.distributed import Runtime
+
+runtime = Runtime()
+try:
+    pipe = load_pipeline("flux", runtime=runtime)
+    result = pipe("A watercolor landscape", update_order=1, init_order=2)
+    if runtime.is_main:
+        result.images[0].save("landscape.png")
+finally:
+    runtime.close()
+```
+
 ## Experiments
 
 Create `prompts.txt` with one prompt per nonempty line, then compare p and q:
