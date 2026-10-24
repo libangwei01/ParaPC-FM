@@ -147,11 +147,6 @@ tests/            数值、模型管线与通信测试
 docs/             算法说明与实验配置
 ```
 
-## 许可证
-
-ParaPC-FM 原创部分采用 [MIT 许可证](LICENSE)。
-第三方代码的许可范围见 [第三方来源说明](THIRD_PARTY_NOTICES.md)。
-
 ## 引用与致谢
 
 论文：**ParaPC-FM: Accelerating Parallel Sampling via Principled Initialization**。

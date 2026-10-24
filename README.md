@@ -159,11 +159,6 @@ tests/            Numerical, pipeline and distributed tests
 docs/             Algorithm and experiment settings
 ```
 
-## License
-
-Original ParaPC-FM contributions are licensed under the [MIT License](LICENSE).
-Third-party code is covered separately; see [third-party notices](THIRD_PARTY_NOTICES.md).
-
 ## Citation and acknowledgments
 
 Paper: **ParaPC-FM: Accelerating Parallel Sampling via Principled Initialization**.
