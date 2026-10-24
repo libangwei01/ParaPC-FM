@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "parapc-fm"
+version = "0.1.0"
+description = "Parallel predictor-corrector sampling with principled initialization"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.10"
+dependencies = [
+  "torch>=2.5", "diffusers==0.36.0", "transformers>=4.44,<5",
+  "accelerate>=1.0,<2", "safetensors>=0.4", "sentencepiece>=0.2",
+  "protobuf>=3.20", "Pillow>=10", "PyYAML>=6",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+include = ["parapc_fm*"]
+
+[tool.setuptools]
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md", "LICENSES/*.txt"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

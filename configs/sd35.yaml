@@ -1,0 +1,9 @@
+# Default demo settings; see docs/reproduction.md for paper sweeps.
+num_inference_steps: 50
+height: 512
+width: 512
+seed: 0
+window_size: 8
+init_order: 1
+tolerance: 1.0
+update_order: 0
