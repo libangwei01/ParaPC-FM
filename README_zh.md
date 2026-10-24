@@ -99,7 +99,9 @@ SD3、SD3.5 和 SD1.5 支持 `--negative_prompt`。
 每对分类器自由引导预测计为一次引导后的时间步评估。
 模型加载、准备、采样和解码耗时分别记录。重复使用同一输出目录会覆盖已有示例结果。
 
-## Python 接口
+## 使用示例
+
+### Python 接口
 
 多卡使用 `torchrun` 运行以下程序，单卡使用 `python`：
 
@@ -117,7 +119,7 @@ finally:
     runtime.close()
 ```
 
-## 实验
+### 实验
 
 准备每个非空行包含一条提示词的 `prompts.txt`，运行阶数对比：
 
@@ -135,16 +137,22 @@ Flow 模型添加 `--all_update_orders` 后同时对比 p=0、1、2。
 ## 代码结构
 
 ```text
-parapc_fm/
-  prediction/     预测、初始化与数值系数
-  sampling/       滑动窗口更新与收敛
-  distributed/    时间步分配与通信
-  models/         FLUX、SD3、SD3.5 和 SD1.5 模型管线
-demos/            各模型示例
-configs/          模型配置
-scripts/          实验脚本
-tests/            数值、模型管线与通信测试
-docs/             算法说明与实验配置
+.
+├── parapc_fm/
+│   ├── prediction/      预测、初始化与数值系数
+│   ├── sampling/        滑动窗口更新与收敛
+│   ├── distributed/     时间步分配与通信
+│   └── models/
+│       ├── flux/        FLUX.1-dev
+│       ├── sd3/         Stable Diffusion 3
+│       ├── sd35/        Stable Diffusion 3.5
+│       └── sd15/        Stable Diffusion 1.5 + ParaTAA
+├── assets/              方法示意图
+├── demos/               各模型示例
+├── configs/             模型配置
+├── scripts/             实验脚本
+├── tests/               数值、模型管线与通信测试
+└── docs/                算法说明与实验配置
 ```
 
 ## 致谢

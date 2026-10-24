@@ -110,7 +110,9 @@ classifier-free guidance pair counts as one guided timestep evaluation.
 Model loading, preparation, sampling and decoding times are recorded
 separately. Reusing an output directory overwrites its demo results.
 
-## Python API
+## Usage
+
+### Python API
 
 Run the following program with `torchrun` for multiple GPUs or `python` for
 one GPU:
@@ -129,7 +131,7 @@ finally:
     runtime.close()
 ```
 
-## Experiments
+### Experiments
 
 Create `prompts.txt` with one prompt per nonempty line, then compare p and q:
 
@@ -147,16 +149,22 @@ See [experiment settings](docs/reproduction.md).
 ## Project structure
 
 ```text
-parapc_fm/
-  prediction/     Prediction, initialization and numerical coefficients
-  sampling/       Sliding-window updates and convergence
-  distributed/    Timestep distribution and communication
-  models/         FLUX, SD3, SD3.5 and SD1.5 pipelines
-demos/            Per-model examples
-configs/          Model configurations
-scripts/          Benchmark scripts
-tests/            Numerical, pipeline and distributed tests
-docs/             Algorithm and experiment settings
+.
+├── parapc_fm/
+│   ├── prediction/      Prediction, initialization and numerical coefficients
+│   ├── sampling/        Sliding-window updates and convergence
+│   ├── distributed/     Timestep distribution and communication
+│   └── models/
+│       ├── flux/        FLUX.1-dev
+│       ├── sd3/         Stable Diffusion 3
+│       ├── sd35/        Stable Diffusion 3.5
+│       └── sd15/        Stable Diffusion 1.5 + ParaTAA
+├── assets/              Method diagrams
+├── demos/               Per-model examples
+├── configs/             Model configurations
+├── scripts/             Benchmark scripts
+├── tests/               Numerical, pipeline and distributed tests
+└── docs/                Algorithm and experiment settings
 ```
 
 ## Acknowledgments
