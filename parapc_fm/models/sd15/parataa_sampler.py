@@ -2,7 +2,7 @@
 
 Upstream: https://github.com/TZW1998/ParaTAA-Diffusion
 Authors: Zhiwei Tang, Jiasheng Tang, Hao Luo, Fan Wang, Tsung-Hui Chang.
-Source: parallel_sd_unic_2.py; see THIRD_PARTY_NOTICES.md for provenance.
+Source: parallel_sd_unic_2.py.
 Prediction and initialization have been moved to parapc_fm.prediction.
 """
 import torch
