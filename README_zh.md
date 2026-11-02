@@ -1,7 +1,5 @@
 # ParaPC-FM: Accelerating Parallel Sampling via Principled Initialization
 
-**NeurIPS 2026**
-
 [English](README.md)
 
 ParaPC-FM 复用已有预测，为并行采样中的未来状态提供初始化。
