@@ -175,8 +175,10 @@ Our implementation builds on [ParaDiGMS](https://github.com/AndyShih12/paradigms
 formulation is inspired by [UniPC](https://github.com/wl-zhao/UniPC).
 We thank the authors for sharing their work.
 
+<!--
 ## Citation
 
 If you find our work useful in your research, please consider citing our paper.
 
-<!-- Add the paper's BibTeX entry here. -->
+Add the paper's BibTeX entry here.
+-->

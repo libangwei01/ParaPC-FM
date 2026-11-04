@@ -162,8 +162,10 @@ Flow 模型添加 `--all_update_orders` 后同时对比 p=0、1、2。
 [Diffusers](https://github.com/huggingface/diffusers) 构建，预测校正方法受到
 [UniPC](https://github.com/wl-zhao/UniPC) 的启发。感谢相关作者分享他们的工作。
 
+<!--
 ## 引用
 
 如果本工作对你的研究有所帮助，欢迎引用我们的论文。
 
-<!-- 在此添加论文的 BibTeX 引用。 -->
+在此添加论文的 BibTeX 引用。
+-->
